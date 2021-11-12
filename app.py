@@ -4,6 +4,7 @@ from flask_bootstrap import Bootstrap
 from forms import LoginForm, RegisterForm
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy import exc
 
 
 app = Flask(__name__)
@@ -44,14 +45,13 @@ def register():
     if form.validate_on_submit():
         hashed = generate_password_hash(form.password.data)
         user = User(username=form.username.data, password=hashed)
-        if user.username == User.query.filter_by(username=form.username.data).first():
-            return "<h1>User already registered</h1>"
-
-        db.session.add(user)
-        db.session.commit()
-
-        return '<h1>sup</h1>'
-
+        try:
+            db.session.add(user)
+            db.session.commit()
+            return redirect(url_for('home'))
+        except exc.IntegrityError:
+            db.session.rollback()
+            return "<h1>Username already exists</h1>"
     return render_template('register.html', form=form)
 
 
