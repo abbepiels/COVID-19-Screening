@@ -1,0 +1,35 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block styles%}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('.static', filename='login.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+
+{% endblock %}
+
+{% block content %}
+<ul class="navbar">
+    <li class="nav_element"><a href="{{ url_for('home') }}">Home</a></li>
+    <li class="nav_element"><a href="{{ url_for('login') }}">Login</a></li>
+    <li class="nav_element"><a href="{{ url_for('register') }}">Register</a></li>
+</ul>
+
+    <div class='container'>
+        <h2 class='login-header'>User Login</h2>
+        <form class='login' action="/login" method="post">
+            {{ form.hidden_tag() }}
+            {{ wtf.form_field(form.username) }}
+            {{ wtf.form_field(form.password) }}
+            {{ wtf.form_field(form.remember) }}
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Continue</button>
+
+        </form>
+    </div>
+{% endblock %}

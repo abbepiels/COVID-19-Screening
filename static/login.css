@@ -1,0 +1,134 @@
+@font-face {
+  font-family: lessSans;
+  src: url("Less-Bold.otf");
+}
+
+body {
+  font-size: 15px;
+  font-family: "Proxima Nova", sans-serif;
+  font-style: normal;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.details {
+  font-size: 13px;
+  color: black;
+  padding-left: 10px;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 4px;
+  overflow: hidden;
+  background-color: #f6f9fc;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+.nav_element {
+  float: left;
+  text-decoration: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: cornflowerblue;
+  color: white;
+  text-decoration: none;
+}
+.query li a {
+  color: black;
+  list-style-type: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+.query li a:hover {
+  color: white;
+  list-style-type: none;
+  font-style: normal;
+  text-decoration: none;
+}
+.query {
+  list-style-type: none;
+  padding-top: 20;
+  text-decoration: none;
+}
+.btn {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.login {
+  max-width: 330px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-header {
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.login .checkbox {
+  margin-bottom: 8px;
+  color: grey;
+}
+.login .button {
+  text-align: center;
+}
+
+.login-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+.login .checkbox {
+  font-weight: normal;
+}
+.login .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.login .form-control:focus {
+  z-index: 2;
+}
+.login input[type="username"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.login input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.container {
+  padding-top: 100px;
+}

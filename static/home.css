@@ -1,0 +1,269 @@
+@font-face {
+  font-family: lessSans;
+  src: url("Less-Bold.otf");
+}
+
+body {
+  font-size: 15px;
+  font-family: "Proxima Nova", sans-serif;
+  font-style: normal;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.details {
+  font-size: 13px;
+  color: black;
+  padding-left: 10px;
+}
+h2 {
+  text-align: left;
+}
+
+.wrapper h1 {
+  margin: 0 0 30px;
+  padding-top: 20px;
+  color: black;
+  text-align: center;
+  font-size: 50;
+}
+.box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  min-width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  padding-top: 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.box .form {
+  position: relative;
+}
+.box .form input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  background: transparent;
+}
+
+.box .form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .form input:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: cornflowerblue;
+  font-size: 12px;
+}
+
+.box .form input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: cornflowerblue;
+  font-size: 12px;
+}
+
+.content {
+  padding: 10px;
+}
+
+label {
+  float: left;
+  padding-right: 50px;
+  line-height: 10%;
+  display: block;
+  width: 208px;
+}
+.addition {
+  padding: 10px;
+}
+label {
+  float: left;
+  padding-right: 50px;
+  line-height: 10%;
+  display: block;
+  width: 208px;
+}
+.footer {
+  color: rgb(255, 254, 254);
+  padding: 15px;
+  text-align: center;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 4px;
+  overflow: hidden;
+  background-color: #f6f9fc;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+.nav_element {
+  float: left;
+  text-decoration: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: cornflowerblue;
+  color: white;
+  text-decoration: none;
+}
+.query li a {
+  color: black;
+  list-style-type: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+.query li a:hover {
+  color: white;
+  list-style-type: none;
+  font-style: normal;
+  text-decoration: none;
+}
+.query {
+  list-style-type: none;
+  padding-top: 20;
+  text-decoration: none;
+}
+.btn {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.button-content {
+  display: inline-grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 16%);
+  padding-bottom: 90px;
+}
+.button-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: ghostwhite;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button-content a:hover {
+  opacity: 0.8;
+  color: ghostwhite;
+}
+
+.filter {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: fit-content;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.filter {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.filter:hover .dropdown {
+  display: block;
+}
+
+.filter:hover {
+  opacity: 0.8;
+}
+.block {
+  padding: 20px;
+}
+
+.box .label {
+  padding: 10px;
+}
+
+.box h1 {
+  margin: 0 0 20px;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+.box h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+.box .text {
+  text-align: center;
+}
