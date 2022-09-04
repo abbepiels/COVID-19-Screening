@@ -1,0 +1,42 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+    Symptoms
+{% endblock %}
+
+{% block styles%}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('.static', filename='login.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='screening.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+
+{% endblock %}
+
+{% block content %}
+<ul class="navbar">
+    <li class="nav_element"><a href="{{ url_for('home') }}">Home</a></li>
+    <li class="nav_element"><a href="{{ url_for('logout') }}">Logout</a></li>
+</ul>
+
+    <div class='container'>
+        <h2 class='symptom-header'>Enter Symptoms</h2>
+        <form class='login' action="{{url_for('screen', id=user_id.ID)}}" method="POST">
+            {{ form.hidden_tag() }}
+            {{ wtf.form_field(form.doctor) }}
+            {{ wtf.form_field(form.fev) }}
+            {{ wtf.form_field(form.throat) }}
+            {{ wtf.form_field(form.cough) }}
+            {{ wtf.form_field(form.nausea) }}
+            {{ wtf.form_field(form.difficulty) }}
+            {{ wtf.form_field(form.fatigue) }}
+            {{ wtf.form_field(form.bodyaches) }}
+            {{ wtf.form_field(form.headache) }}
+            {{ wtf.form_field(form.extra) }}
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Continue</button>
+
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+Symptoms
+{% endblock %}
+
+
+{% block styles%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='login.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+{% endblock %}
+
+{% block content %}
+<ul class="navbar">
+    <li class="nav_element"><a href="{{ url_for('home') }}">Return to Home Page</a></li>
+</ul>
+<div class='container'>
+    <h2 class='login-header'> 
+        <h3>Greetings User {{session['username']}}! You have succesfully logged out.</h3>
+    </h2>
+</div>
+
+{% endblock %}

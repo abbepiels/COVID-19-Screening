@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+{% block styles%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='login.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+{% endblock %}
+
+{% block title %}Sorry. You cannot access this page{% endblock %}
+{% block body %}
+<h1>You Must Log In First</h1>
+  <p><a href="{{ url_for('login') }}">Click Here to Log In</a>
+{% endblock %}

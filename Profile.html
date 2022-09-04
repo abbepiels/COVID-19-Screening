@@ -1,0 +1,34 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+Your Profile
+{% endblock %}
+
+{% block styles%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='login.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+
+{% endblock %}
+
+{% block content %}
+<ul class="navbar">
+    <li class="nav_element"><a href="{{ url_for('home') }}">Home</a></li>
+    <li class="nav_element"><a href="{{ url_for('logout') }}">Logout</a></li>
+</ul>
+<div class='container'>
+    <h2 class='login-header'>Your Profile</h2>
+    <form class='login' action="{{url_for('profile', id=id)}}" method="get">
+        <ul class="query">
+            <li><a href="{{url_for('screen',id=id)}}">Enter Symptoms</a></li>
+            <li><a href="{{url_for('symptom',id=id)}}">View Symptoms</a></li>
+            <li><a href="{{url_for('account',id=id)}}">Enter Personal Information</a></li>
+            <li><a href="{{url_for('info',id=id)}}">View Personal Information</a></li>
+            <li><a href="{{url_for('trace',id=id)}}">Enter Direct Contacts</a></li>
+
+    </form>
+</div>
+{% endblock %}
