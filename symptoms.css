@@ -1,0 +1,102 @@
+@font-face {
+  font-family: lessSans;
+  src: url("Less-Bold.otf");
+}
+
+.symptoms {
+  font-family: "Proxima Nova", sans-serif;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.title-boy {
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+body {
+  font-size: 15px;
+  font-family: "Proxima Nova", sans-serif;
+  font-style: normal;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.details {
+  font-size: 13px;
+  color: black;
+  padding-left: 10px;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 4px;
+  overflow: hidden;
+  background-color: #f6f9fc;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+.nav_element {
+  float: left;
+  text-decoration: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: cornflowerblue;
+  color: white;
+  text-decoration: none;
+}
+.query li a {
+  color: black;
+  list-style-type: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+.query li a:hover {
+  color: white;
+  list-style-type: none;
+  font-style: normal;
+  text-decoration: none;
+}
+.query {
+  list-style-type: none;
+  padding-top: 20;
+  text-decoration: none;
+}
+
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: lessSans;
+  src: url("Less-Bold.otf");
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
